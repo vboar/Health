@@ -1,0 +1,9 @@
+.navbar-brand {
+    font-size: 25px;
+    font-weight: lighter;
+    margin-right: 50px;
+}
+
+.navbar-nav {
+    font-weight: lighter;
+}
