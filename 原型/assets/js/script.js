@@ -12,3 +12,11 @@ $(document).ready(function () {
 
 
 });
+
+// 回到顶部
+$(function () {
+    $.scrollUp({
+        scrollTitle: false,
+        scrollImg: true
+    });
+});

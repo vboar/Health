@@ -44,26 +44,45 @@ footer p {
     margin-top: 18px;
 }
 
+
+.checkbox label, .radio-inline {
+    padding-left: 0px;
+}
+
 .loading {
     text-align: center;
+    color: #a0a0a0;
 }
 
-.left-panel .subtitle {
-    font-size: small;
-}
-
-.left-panel .title {
-    display: inline;
-}
-
-.left-panel .panel-body img {
+.img-border {
     border: solid 2px #1FA67A;
+}
+
+.img-margin-bottom {
     margin-bottom: 15px;
 }
 
-.left-panel .panel-heading {
+.panel-top-border {
+    border-top: solid 1px #e0e0e0;
+}
+
+.inline-title {
+    display: inline;
+}
+
+.panel-heading-up {
     margin-bottom: -12px;
 }
+
+/** 回到顶部 **/
+#scrollUp {
+    background-image: url("../img/top.png");
+    bottom: 70px;
+    right: 30px;
+    width: 38px;    /* Width of image */
+    height: 38px;   /* Height of image */
+}
+
 
 /** Group **/
 
