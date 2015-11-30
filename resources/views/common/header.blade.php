@@ -23,7 +23,7 @@
                         <li><a href="/admin">后台管理</a></li>
                     @endif
                     <li>
-                        <a href="#" title="您有四条新的通知" class="todo">
+                        <a href="/message" title="您有四条新的通知">
                             <i class="fa fa-envelope-o"></i>
                             <span class="label label-warning">4</span>
                         </a>
@@ -33,11 +33,11 @@
                             <img src="{{ URL::asset('/img/avatar/default.jpg') }}" class="img-circle" style="width: 30px">
                         </a>
                         <ul class="dropdown-menu" role="menu">
-                            <li><a href="user_home.html">我的主页</a></li>
-                            <li><a href="setting.html">个人设置</a></li>
+                            <li><a href="/user">我的主页</a></li>
+                            <li><a href="/setting">个人设置</a></li>
                             <li class="divider"></li>
-                            <li><a href="#" class="todo">帮助中心</a></li>
-                            <li><a href="#" class="todo">建议反馈</a></li>
+                            <li><a href="/help">帮助中心</a></li>
+                            <li><a href="/feedback">建议反馈</a></li>
                             <li class="divider"></li>
                             <li><a href="/auth/logout">登出</a></li>
                         </ul>

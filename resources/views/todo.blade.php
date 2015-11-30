@@ -1,6 +1,6 @@
 @extends('common/app')
 @section('title')
-    我的首页 - 知康
+    未完成的页面 - 知康
 @stop
 @section('content')
     <div class="text-center">

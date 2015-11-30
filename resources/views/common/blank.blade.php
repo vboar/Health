@@ -10,18 +10,11 @@
     <link href="{{ URL::asset('/assets/css/style.css') }}" rel="stylesheet">
     <script src="{{ URL::asset('/assets/js/jquery-2.1.4.min.js') }}"></script>
     <script src="{{ URL::asset('/assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ URL::asset('/assets/js/jquery.scrollUp.min.js') }}"></script>
     <script src="{{ URL::asset('/assets/js/script.js') }}"></script>
     @yield('css_js_extra_file')
 </head>
 <body>
     @yield('body')
-
-    <script>
-        $(document).ready(function() {
-            $('.todo').click(function () {
-                alert("暂未完成该功能...");
-            });
-        });
-    </script>
 </body>
 </html>

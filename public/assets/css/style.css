@@ -44,3 +44,11 @@ footer p {
     margin-top: 18px;
 }
 
+/** 回到顶部 **/
+#scrollUp {
+    background-image: url("../../img/top.png");
+    bottom: 70px;
+    right: 30px;
+    width: 38px;    /* Width of image */
+    height: 38px;   /* Height of image */
+}

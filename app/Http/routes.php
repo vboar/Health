@@ -37,3 +37,19 @@ Route::group(['prefix' => 'admin', 'middleware' => ['role:admin']], function() {
     Route::post('/update', 'AdminController@update');
     Route::get('/delete/{id}', 'AdminController@delete');
 });
+
+// 个人设置
+Route::get('/setting', 'SettingController@index');
+Route::post('/setting/info', 'SettingController@info');
+Route::post('/setting/avatar', 'SettingController@avatar');
+Route::post('/setting/password', 'SettingController@password');
+
+// 个人主页
+Route::get('/user/{username?}', 'UserController@index');
+
+// 消息管理
+Route::get('/message', 'TodoController@index');
+
+// 其他功能模块
+Route::get('/help', 'TodoController@index');
+Route::get('/feedback', 'TodoController@index');

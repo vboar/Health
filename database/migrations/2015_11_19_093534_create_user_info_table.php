@@ -22,8 +22,6 @@ class CreateUserInfoTable extends Migration
             $table->date('birthday');
             $table->text('introduction')->nullable();
             $table->string('avatar_url');
-            $table->tinyInteger('info_secret');
-            $table->tinyInteger('health_secret');
 
             $table->foreign('id')->references('id')->on('users')
                 ->onUpdate('cascade')->onDelete('cascade');
