@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\User;
 use App\Role;
 use App\UserInfo;
+use App\UserGoal;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
@@ -74,6 +75,13 @@ class AuthController extends Controller
             'avatar_url' => 'default.jpg',
             'info_secret' => 0,
             'health_secret' => 0,
+        ]);
+        UserGoal::create([
+            'user_id' => $user->id,
+            'heat' => 1500,
+            'distance' => 20,
+            'step' => 50000,
+            'weight' => 60,
         ]);
         $user->attachRole(Role::where('name', '=', 'user')->first());
         return $user;

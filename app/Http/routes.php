@@ -44,12 +44,37 @@ Route::post('/setting/info', 'SettingController@info');
 Route::post('/setting/avatar', 'SettingController@avatar');
 Route::post('/setting/password', 'SettingController@password');
 
-// 个人主页
-Route::get('/user/{username?}', 'UserController@index');
-
 // 消息管理
 Route::get('/message', 'TodoController@index');
+
+// 个人主页
+Route::get('/user/{username?}', 'TodoController@index');
 
 // 其他功能模块
 Route::get('/help', 'TodoController@index');
 Route::get('/feedback', 'TodoController@index');
+
+// 健康数据模块
+Route::group(['prefix' => 'health'], function() {
+    Route::get('/', 'TodoController@index');
+});
+
+// 活动模块
+Route::group(['prefix' => 'activity'], function() {
+    Route::get('/', 'TodoController@index');
+});
+
+// 建议模块
+Route::group(['prefix' => 'advice'], function() {
+    Route::get('/', 'TodoController@index');
+});
+
+// 朋友圈模块
+Route::group(['prefix' => 'moment'], function() {
+    Route::get('/', 'TodoController@index');
+});
+
+// 兴趣组模块
+Route::group(['prefix' => 'group'], function() {
+    Route::get('/', 'TodoController@index');
+});

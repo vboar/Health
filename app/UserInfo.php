@@ -11,6 +11,6 @@ class UserInfo extends Model
     public $timestamps = false;
 
     protected $fillable = ['id', 'real_name', 'nickname', 'gender', 'province', 'city', 'birthday',
-        'introduction', 'avatar_url', 'info_secret', 'health_secret'];
+        'introduction', 'avatar_url'];
 
 }

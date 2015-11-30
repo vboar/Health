@@ -2,6 +2,10 @@
 
 use Illuminate\Database\Seeder;
 
+use App\User;
+use App\UserGoal;
+
+
 class HealthSeeder extends Seeder
 {
     /**
@@ -11,6 +15,15 @@ class HealthSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $users = User::all();
+        foreach ($users as $user) {
+            UserGoal::create([
+                'user_id' => $user->id,
+                'heat' => 1500,
+                'distance' => 20,
+                'step' => 50000,
+                'weight' => 60,
+            ]);
+        }
     }
 }
