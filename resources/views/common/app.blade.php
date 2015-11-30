@@ -8,8 +8,9 @@
     <link href="{{ URL::asset('/assets/css/bootstrap.min.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('/assets/css/font-awesome.min.css') }}" rel="stylesheet">
     <link href="{{ URL::asset('/assets/css/style.css') }}" rel="stylesheet">
-    <script src="{{ URL::asset('/assets/js/jquery-1.11.3.min.js') }}"></script>
+    <script src="{{ URL::asset('/assets/js/jquery-2.1.4.min.js') }}"></script>
     <script src="{{ URL::asset('/assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ URL::asset('/assets/js/script.js') }}"></script>
     @yield('css_js_extra_file')
 </head>
 <body>
@@ -22,6 +23,12 @@
 @include('common/footer')
 
 @yield('css_js_extra_text')
-
+    <script>
+        $(document).ready(function() {
+            $('.todo').click(function () {
+                alert("暂未完成该功能...");
+            });
+        });
+    </script>
 </body>
 </html>

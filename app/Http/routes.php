@@ -26,3 +26,14 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 
 // 重置密码
 Route::get('auth/password_reset', 'Auth\PasswordController@getEmail');
+
+// 用户管理
+Route::group(['prefix' => 'admin', 'middleware' => ['role:admin']], function() {
+    Route::get('/', 'AdminController@index');
+    Route::get('/all/{n?}', 'AdminController@all');
+    Route::get('/add', 'AdminController@add');
+    Route::post('/create', 'AdminController@create');
+    Route::get('/edit/{id}', 'AdminController@edit');
+    Route::post('/update', 'AdminController@update');
+    Route::get('/delete/{id}', 'AdminController@delete');
+});

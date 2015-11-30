@@ -19,8 +19,11 @@
             </ul>
             @if (Auth::check())
                 <ul class="nav navbar-nav navbar-right">
+                    @if (Auth::getUser()->hasRole('admin'))
+                        <li><a href="/admin">后台管理</a></li>
+                    @endif
                     <li>
-                        <a href="#" title="您有四条新的通知">
+                        <a href="#" title="您有四条新的通知" class="todo">
                             <i class="fa fa-envelope-o"></i>
                             <span class="label label-warning">4</span>
                         </a>
@@ -33,8 +36,8 @@
                             <li><a href="user_home.html">我的主页</a></li>
                             <li><a href="setting.html">个人设置</a></li>
                             <li class="divider"></li>
-                            <li><a href="#">帮助中心</a></li>
-                            <li><a href="#">建议反馈</a></li>
+                            <li><a href="#" class="todo">帮助中心</a></li>
+                            <li><a href="#" class="todo">建议反馈</a></li>
                             <li class="divider"></li>
                             <li><a href="/auth/logout">登出</a></li>
                         </ul>

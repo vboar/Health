@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Role;
 use App\UserInfo;
 use Validator;
 use App\Http\Controllers\Controller;
@@ -74,6 +75,7 @@ class AuthController extends Controller
             'info_secret' => 0,
             'health_secret' => 0,
         ]);
+        $user->attachRole(Role::where('name', '=', 'user')->first());
         return $user;
     }
 
