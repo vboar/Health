@@ -71,6 +71,7 @@ class CreateHealthTable extends Migration
             $table->time('deep_sleeping_time');
             $table->integer('wake_up_times');
             $table->double('sleep_points');
+            $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')
                 ->onUpdate('cascade')->onDelete('cascade');

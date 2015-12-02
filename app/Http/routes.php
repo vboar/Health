@@ -63,6 +63,8 @@ Route::group(['prefix' => 'health'], function() {
     Route::get('/getHealthData/{para}', 'HealthController@getHealthData');
     Route::get('/getHealthChartData', 'HealthController@getHealthChartData');
     Route::get('/sleep', 'HealthController@sleep');
+    Route::get('/getSleepData', 'HealthController@getSleepData');
+    Route::get('/getSleepChartData', 'HealthController@getSleepChartData');
     Route::get('/goal', 'HealthController@setGoal');
     Route::post('/goal', 'HealthController@updateGoal');
 });

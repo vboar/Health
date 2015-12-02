@@ -118,8 +118,22 @@ class HealthController extends Controller
         return response()->json($data);
     }
 
-
     public function sleep() {
-        return view('health/sleep');
+        $data = DB::select('select * from data_sleep where user_id = ? order by start_time desc limit 1',
+            [\Auth::user()->id])[0];
+        return view('health/sleep', compact('data'));
     }
+
+    public function getSleepData() {
+        $data = DB::select('select * from data_sleep where user_id = ? order by start_time desc',
+            [\Auth::user()->id]);
+        return response()->json($data);
+    }
+
+    public function getSleepChartData() {
+        $data = DB::select('select * from data_sleep where user_id = ? order by start_time desc limit 10',
+            [\Auth::user()->id]);
+        return response()->json($data);
+    }
+
 }
