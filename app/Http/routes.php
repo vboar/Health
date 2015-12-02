@@ -45,10 +45,14 @@ Route::post('/setting/avatar', 'SettingController@avatar');
 Route::post('/setting/password', 'SettingController@password');
 
 // 消息管理
-Route::get('/message', 'TodoController@index');
+Route::get('/message', function() {
+    return view('message/index');
+});
 
 // 个人主页
-Route::get('/user/{username?}', 'TodoController@index');
+Route::get('/user/{username?}', function() {
+    return view('user');
+});
 
 // 其他功能模块
 Route::get('/help', 'TodoController@index');
@@ -80,11 +84,11 @@ Route::group(['prefix' => 'expert'], function() {
 });
 
 // 朋友圈模块
-Route::group(['prefix' => 'moment'], function() {
-    Route::get('/', 'TodoController@index');
+Route::get('/moment', function() {
+    return view('moment/index');
 });
 
 // 兴趣组模块
-Route::group(['prefix' => 'group'], function() {
-    Route::get('/', 'TodoController@index');
+Route::get('/group', function() {
+    return view('group/index');
 });
