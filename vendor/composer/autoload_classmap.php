@@ -6,8 +6,13 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'CreateActivityTable' => $baseDir . '/database/migrations/2015_12_01_082536_create_activity_table.php',
+    'CreateArticleTable' => $baseDir . '/database/migrations/2015_12_01_083920_create_article_table.php',
+    'CreateFriendMomentTable' => $baseDir . '/database/migrations/2015_12_01_084402_create_friend_moment_table.php',
+    'CreateGroupTable' => $baseDir . '/database/migrations/2015_12_01_085644_create_group_table.php',
     'CreateHealthTable' => $baseDir . '/database/migrations/2015_11_30_181503_create_health_table.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+    'CreateQuestionTable' => $baseDir . '/database/migrations/2015_12_01_083242_create_question_table.php',
     'CreateUserInfoTable' => $baseDir . '/database/migrations/2015_11_19_093534_create_user_info_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',
@@ -84,6 +89,7 @@ return array(
     'Hamcrest\\Type\\IsString' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Type/IsString.php',
     'Hamcrest\\Util' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
     'Hamcrest\\Xml\\HasXPath' => $vendorDir . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
+    'HealthDataSeeder' => $baseDir . '/database/seeds/HealthDataSeeder.php',
     'HealthSeeder' => $baseDir . '/database/seeds/HealthSeeder.php',
     'IlluminateQueueClosure' => $vendorDir . '/laravel/framework/src/Illuminate/Queue/IlluminateQueueClosure.php',
     'PHPUnit_Exception' => $vendorDir . '/phpunit/phpunit/src/Exception.php',
@@ -518,6 +524,7 @@ return array(
     'SebastianBergmann\\RecursionContext\\InvalidArgumentException' => $vendorDir . '/sebastian/recursion-context/src/InvalidArgumentException.php',
     'SebastianBergmann\\Version' => $vendorDir . '/sebastian/version/src/Version.php',
     'SessionHandlerInterface' => $vendorDir . '/symfony/http-foundation/Resources/stubs/SessionHandlerInterface.php',
+    'SportsDataSeeder' => $baseDir . '/database/seeds/SportsDataSeeder.php',
     'TestCase' => $baseDir . '/tests/TestCase.php',
     'Text_Template' => $vendorDir . '/phpunit/php-text-template/src/Template.php',
     'UserTableSeeder' => $baseDir . '/database/seeds/UserTableSeeder.php',

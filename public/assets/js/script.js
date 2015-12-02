@@ -14,6 +14,16 @@ $(document).ready(function() {
         }
     });
 
+    var current = window.location.pathname;
+    var menus = $('.list-group').children();
+    menus.each(function() {
+        var temp = $(this).attr("href");
+        var result = current.indexOf(temp);
+        if (result == 0) {
+            $(this).addClass('active');
+        }
+    });
+
     // 下拉菜单自动展开收回
     $("li.dropdown").mouseover(function() {
         $(this).addClass('open');

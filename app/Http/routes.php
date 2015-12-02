@@ -56,7 +56,15 @@ Route::get('/feedback', 'TodoController@index');
 
 // 健康数据模块
 Route::group(['prefix' => 'health'], function() {
-    Route::get('/', 'TodoController@index');
+    Route::get('/', 'HealthController@index');
+    Route::get('/sports', 'HealthController@sports');
+    Route::get('/getSportsData/{para}', 'HealthController@getSportsData');
+    Route::get('/health', 'HealthController@health');
+    Route::get('/getHealthData/{para}', 'HealthController@getHealthData');
+    Route::get('/getHealthChartData', 'HealthController@getHealthChartData');
+    Route::get('/sleep', 'HealthController@sleep');
+    Route::get('/goal', 'HealthController@setGoal');
+    Route::post('/goal', 'HealthController@updateGoal');
 });
 
 // 活动模块
@@ -65,7 +73,7 @@ Route::group(['prefix' => 'activity'], function() {
 });
 
 // 建议模块
-Route::group(['prefix' => 'advice'], function() {
+Route::group(['prefix' => 'expert'], function() {
     Route::get('/', 'TodoController@index');
 });
 

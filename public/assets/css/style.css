@@ -52,3 +52,15 @@ footer p {
     width: 38px;    /* Width of image */
     height: 38px;   /* Height of image */
 }
+
+.panel-top-border {
+    border-top: solid 1px #e0e0e0;
+}
+
+.inline-title {
+    display: inline;
+}
+
+.panel-heading-up {
+    margin-bottom: -12px;
+}
