@@ -75,7 +75,15 @@ Route::group(['prefix' => 'health'], function() {
 
 // 活动模块
 Route::group(['prefix' => 'activity'], function() {
-    Route::get('/', 'TodoController@index');
+    Route::get('/', 'ActivityController@index');
+    Route::get('/add', 'ActivityController@add');
+    Route::post('/add', 'ActivityController@create');
+    Route::get('/delete/{id}', 'ActivityController@delete');
+    Route::get('/getAllData/{para?}', 'ActivityController@getAllData');
+    Route::get('/edit/{id?}', 'ActivityController@edit');
+    Route::post('/edit', 'ActivityController@update');
+    Route::get('/detail/{id}', 'ActivityController@detail');
+    Route::get('/join/{id}', 'ActivityController@join');
 });
 
 // 建议模块
