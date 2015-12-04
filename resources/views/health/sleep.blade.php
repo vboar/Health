@@ -61,6 +61,13 @@
         $(document).ready(function() {
             loadChart();
             loadData();
+            $('#detail').hide();
+            $('#js-brief').click(function() {
+                $('#detail').hide();
+            });
+            $('#js-detail').click(function() {
+                $('#detail').show();
+            });
         });
         function loadChart() {
             temp1 = new Array();

@@ -29,7 +29,7 @@
                     </li>
                     <li class="dropdown nav-user">
                         <a href="#" style="padding: 10px" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            <img src="{{ URL::asset('/img/avatar/default.jpg') }}" class="img-circle" style="width: 30px">
+                            <img src="{{ URL::asset('/img/avatar/'.Auth::user()->info->avatar_url) }}" class="img-circle" style="width: 30px">
                         </a>
                         <ul class="dropdown-menu" role="menu">
                             <li><a href="/user">我的主页</a></li>

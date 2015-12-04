@@ -36,6 +36,7 @@ class ActivityController extends Controller
 
     public function delete($id) {
         $activity = Activity::find($id);
+        if ($activity->user_id != \Auth::user()->id) return response('Unauthorized.', 401);
         $activity->delete();
         return redirect('/activity');
     }
@@ -54,7 +55,7 @@ class ActivityController extends Controller
         $activity->type = 0;
         $activity->remark = $_POST['remark'];
         $activity->address = $_POST['address'];
-        $activity->user_id = \Auth::user()->id;
+        if ($activity->user_id != \Auth::user()->id) return response('Unauthorized.', 401);
         $activity->save();
         return redirect('/activity');
     }

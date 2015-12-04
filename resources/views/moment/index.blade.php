@@ -292,6 +292,7 @@
             $('.comment-click').click(function () {
                 $('.comment-panel').fadeToggle(200);
             })
+            alert("此页面未完成，仅仅是静态页面");
         });
     </script>
 @stop

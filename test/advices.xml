@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<advices>
+    <advice>
+        <question_id>1</question_id>
+        <content>content_1</content>
+    </advice>
+    <advice>
+        <question_id>2</question_id>
+        <content>content_2</content>
+    </advice>
+    <advice>
+        <question_id>3</question_id>
+        <content>content_3</content>
+    </advice>
+    <advice>
+        <question_id>4</question_id>
+        <content>content_4</content>
+    </advice>
+    <advice>
+        <question_id>5</question_id>
+        <content>content_5</content>
+    </advice>
+</advices>

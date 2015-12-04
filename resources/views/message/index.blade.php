@@ -212,11 +212,12 @@
     </style>
 
     <script>
-        $(document).ready(function(){
+        $(document).ready(function() {
             $('input').iCheck({
                 checkboxClass: 'icheckbox_square-green',
                 increaseArea: '20%' // optional
             });
+            alert("此页面未完成，仅仅是静态页面");
         });
     </script>
 @stop

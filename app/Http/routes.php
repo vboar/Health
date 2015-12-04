@@ -88,7 +88,22 @@ Route::group(['prefix' => 'activity'], function() {
 
 // 建议模块
 Route::group(['prefix' => 'expert'], function() {
-    Route::get('/', 'TodoController@index');
+    Route::get('/', 'AdviceController@index');
+    Route::get('/addQuestion', 'AdviceController@addQuestion');
+    Route::post('/addQuestion', 'AdviceController@createQuestion');
+    Route::get('/editQuestion/{id}', 'AdviceController@editQuestion');
+    Route::post('/editQuestion', 'AdviceController@updateQuestion');
+    Route::get('/deleteQuestion/{id}', 'AdviceController@deleteQuestion');
+    Route::get('/getQuestionData/{para?}/{type?}', 'AdviceController@getQuestionData');
+    //para: 默认0为我的提问，1为所有提问，2为我回答的问题； type： 默认0为所有，1为健康，2为运动
+    Route::get('/detail/{id}', 'AdviceController@detail');
+    Route::get('/reply/{id}', 'AdviceController@reply');
+    Route::post('/reply', 'AdviceController@createReply');
+    Route::get('/editReply/{qid}/{id}', 'AdviceController@editReply');
+    Route::post('/editReply', 'AdviceController@updateReply');
+    Route::get('/deleteReply/{qid}/{id}', 'AdviceController@deleteReply');
+    Route::get('/import', 'AdviceController@import');
+    Route::post('/import', 'AdviceController@dealImport');
 });
 
 // 朋友圈模块
@@ -99,4 +114,13 @@ Route::get('/moment', function() {
 // 兴趣组模块
 Route::get('/group', function() {
     return view('group/index');
+});
+
+Route::group(['prefix' => 'data'], function() {
+    Route::get('/sports/create', 'DataController@sportsCreate');
+    Route::get('/health/create', 'DataController@healthCreate');
+    Route::get('/sleep/create', 'DataController@sleepCreate');
+    Route::post('/sports', 'DataController@sportsStore');
+    Route::post('/health', 'DataController@healthStore');
+    Route::post('/sleep', 'DataController@sleepStore');
 });
