@@ -122,11 +122,12 @@ class HealthController extends Controller
         $data = DB::select('select * from data_sleep where user_id = ? order by start_time desc limit 1',
             [\Auth::user()->id]);
         if ($data == null) {
-            return redirect('/health');
+            $flag = 1;
         } else {
             $data = $data[0];
+            $flag = 0;
         }
-        return view('health/sleep', compact('data'));
+        return view('health/sleep', compact('data', 'flag'));
     }
 
     public function getSleepData() {

@@ -14,7 +14,7 @@
             <div class="panel">
                 <div class="panel-heading">
                     <h5 class="inline-title">
-                        @if($q->type = 1)
+                        @if($q->type == 1)
                             [健康]&nbsp
                         @else
                             [运动]&nbsp

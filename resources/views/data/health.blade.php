@@ -45,12 +45,6 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="muscle_percentage" class="col-lg-2 control-label">内脏脂肪</label>
-                    <div class="col-lg-10">
-                        <input type="text" class="form-control" id="muscle_percentage" name="visceral_fat" value="2">
-                    </div>
-                </div>
-                <div class="form-group">
                     <label for="metabolic_rate" class="col-lg-2 control-label">基础代谢率</label>
                     <div class="col-lg-10">
                         <input type="text" class="form-control" id="metabolic_rate" name="metabolic_rate" value="10">
@@ -78,12 +72,6 @@
                     <label for="bmi" class="col-lg-2 control-label">BMI</label>
                     <div class="col-lg-10">
                         <input type="text" class="form-control" id="bmi" name="bmi" value="20">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="heart_rate" class="col-lg-2 control-label">心率</label>
-                    <div class="col-lg-10">
-                        <input type="text" class="form-control" id="heart_rate" name="heart_rate" value="75">
                     </div>
                 </div>
                 <div class="form-group">

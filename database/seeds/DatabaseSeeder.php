@@ -18,6 +18,10 @@ class DatabaseSeeder extends Seeder
          $this->call(UserTableSeeder::class);
          $this->call(HealthSeeder::class);
          $this->call(SportsDataSeeder::class);
+         $this->call(HealthDataSeeder::class);
+         $this->call(SleepDataSeeder::class);
+         $this->call(ActivitySeeder::class);
+         $this->call(AdviceSeeder::class);
 
         Model::reguard();
     }

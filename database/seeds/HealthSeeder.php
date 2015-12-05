@@ -19,9 +19,9 @@ class HealthSeeder extends Seeder
         foreach ($users as $user) {
             UserGoal::create([
                 'user_id' => $user->id,
-                'heat' => 1500,
-                'distance' => 20,
-                'step' => 50000,
+                'heat' => 2000,
+                'distance' => 50,
+                'step' => 100000,
                 'weight' => 60,
             ]);
         }

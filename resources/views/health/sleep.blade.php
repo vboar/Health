@@ -15,6 +15,9 @@
             <div id="myTabContent" class="tab-content">
                 <div class="tab-pane fade active in" id="brief">
                     <div class="sub-content">
+                        @if ($flag == 1)
+                        <h4 style="margin-bottom: 20px;">无睡眠数据</h4>
+                        @else
                         <h4 style="margin-bottom: 20px;">最近一次睡眠</h4>
                         <p>开始睡眠时间：{{ $data->start_time }}</p>
                         <p>结束睡眠时间：{{ $data->end_time }}</p>
@@ -25,6 +28,7 @@
                         <hr/>
                         <h4 style="margin-bottom: 20px;">最近睡眠质量评分</h4>
                         <canvas id="Chart" width="800" height="400"></canvas>
+                        @endif
                     </div>
                 </div>
                 <div class="tab-pane fade active in" id="detail">
