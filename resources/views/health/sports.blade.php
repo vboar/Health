@@ -129,7 +129,6 @@
                         <table class="table table-striped table-hover small">
                             <thead>
                             <tr>
-                                <th>ID</th>
                                 <th>运动类型</th>
                                 <th>开始时间</th>
                                 <th>结束时间</th>
@@ -222,7 +221,7 @@
                     $('#js-tbody').empty();
                     var temp = '';
                     $.each(data, function(i, n) {
-                        temp += "<tr><td>" + n['id'] + "</td><td>" + n['type'] + "</td><td>" + n['start_time'] + "</td><td>" +
+                        temp += "<tr><td>" + n['type'] + "</td><td>" + n['start_time'] + "</td><td>" +
                                 n['end_time'] + "</td><td>" + n['sports_time'] + "</td><td>" + n['heat']
                                 + "</td><td>" + n['distance'] + "</td><td>" + n['step'] + "</td></tr>";
                     });
