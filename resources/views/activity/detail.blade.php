@@ -50,6 +50,14 @@
                     </div>
                     <div class="row">
                         <div class="col-lg-2">
+                            <p>发起人</p>
+                        </div>
+                        <div class="col-lg-10">
+                            <p>{{ \App\UserInfo::find($activity->user_id)->nickname }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-2">
                             <p>备注</p>
                         </div>
                         <div class="col-lg-10">

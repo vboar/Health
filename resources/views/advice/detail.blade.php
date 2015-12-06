@@ -22,6 +22,15 @@
                         {{ $q->topic }}</h5>
                 </div>
                 <div class="panel-body panel-top-border">
+
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <p>提问ID</p>
+                        </div>
+                        <div class="col-lg-10">
+                            {{ $q->id }}
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-lg-2">
                             <p>提问人</p>

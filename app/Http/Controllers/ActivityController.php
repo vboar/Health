@@ -57,7 +57,7 @@ class ActivityController extends Controller
         $activity->address = $_POST['address'];
         if ($activity->user_id != \Auth::user()->id) return response('Unauthorized.', 401);
         $activity->save();
-        return redirect('/activity');
+        return redirect('/activity/detail/'.$_POST['id']);
     }
 
     public function detail($id) {
