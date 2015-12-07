@@ -106,13 +106,14 @@ class AdviceController extends Controller
         $info = \Auth::user()->info;
         $role = \Auth::user()->hasRole(['doctor', 'coach']);
         $user_id = \Auth::user()->id;
+        $nickname = DB::select('select nickname from user_info where id=?', [$q->user_id])[0];
         if (($role == false) && $user_id != $q->user_id) {
             return response('Unauthorized.', 401);
         } else {
             $a = DB::select('select advices.id, content, user_id, real_name from advices
               left join user_info on advices.user_id=user_info.id where question_id=?', [$id]);
             $d = DB::select('select * from advices where user_id=? and question_id=?', [\Auth::user()->id, $id]);
-            return view('/advice/detail', compact('q', 'a', 'info', 'd'));
+            return view('/advice/detail', compact('q', 'a', 'info', 'd', 'nickname'));
         }
     }
 
@@ -176,7 +177,7 @@ class AdviceController extends Controller
                     'user_id'=>\Auth::user()->id,
                 ]);
             }
-            return redirect('/expert/import');
+            return redirect('/expert');
         } else if ($entension == 'xls' || $entension == 'xlsx') {
             Excel::load($upload, function($reader) {
                 $reader = $reader->getSheet(0);
@@ -189,7 +190,7 @@ class AdviceController extends Controller
                     ]);
                 }
             });
-            return redirect('/expert/import');
+            return redirect('/expert');
         } else {
             return response('file error.');
         }

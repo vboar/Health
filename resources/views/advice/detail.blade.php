@@ -36,7 +36,7 @@
                             <p>提问人</p>
                         </div>
                         <div class="col-lg-10">
-                            {{ $info->nickname }}
+                            {{ $nickname->nickname }}
                         </div>
                     </div>
                     <div class="row">
